@@ -17,7 +17,7 @@ func init() {
 	}
 }
 
-func EncodeBytes(b []byte) string {
+func Encode(b []byte) string {
 	if len(b) == 0 {
 		return ""
 	}
@@ -38,7 +38,7 @@ func EncodeBytes(b []byte) string {
 	return string(chars)
 }
 
-func DecodeStr(s string) []byte {
+func Decode(s string) []byte {
 	m := base62CharsetMap
 	val := new(big.Int)
 	baseMul := new(big.Int).SetInt64(1)

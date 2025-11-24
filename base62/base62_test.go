@@ -1,4 +1,4 @@
-package base62
+package xbase62
 
 import (
 	"bytes"

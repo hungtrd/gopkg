@@ -1,4 +1,4 @@
-package base62
+package xbase62
 
 func RandStr(length int) string {
 	return ""

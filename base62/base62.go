@@ -6,13 +6,17 @@ import (
 
 const (
 	base         = 62
-	characterSet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	Uppercase    = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	Lowercase    = "abcdefghijklmnopqrstuvwxyz"
+	Alphabetic   = Uppercase + Lowercase
+	Numeric      = "0123456789"
+	Alphanumeric = Numeric + Alphabetic
 )
 
 var base62CharsetMap = map[rune]int{}
 
 func init() {
-	for i, c := range characterSet {
+	for i, c := range Alphanumeric {
 		base62CharsetMap[c] = i
 	}
 }
@@ -21,7 +25,7 @@ func Encode(b []byte) string {
 	if len(b) == 0 {
 		return ""
 	}
-	charset := characterSet
+	charset := Alphanumeric
 
 	b = append([]byte{1}, b...)
 	num := new(big.Int).SetBytes(b)

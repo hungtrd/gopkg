@@ -46,7 +46,7 @@ func defaultOptions() *Options {
 	return &Options{
 		Title:        "Swagger UI",
 		BasePath:     "/swagger-ui",
-		DocExpansion: "none",
+		DocExpansion: "list",
 	}
 }
 

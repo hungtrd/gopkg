@@ -5,7 +5,7 @@ A reusable Go package that serves Swagger UI with embedded static assets. Caller
 ## Usage
 
 ```go
-import "git.ocn.com.vn/iam/iam/pkg/swaggerui"
+import "github.com/hungtrd/gopkg/swaggerui"
 
 mux := http.NewServeMux()
 
@@ -18,25 +18,26 @@ swaggerui.Register(mux, "/openapi.yaml",
 ```
 
 This registers:
+
 - `GET /swagger-ui` → 301 redirect to `/swagger-ui/`
 - `GET /swagger-ui/` → Swagger UI
 
 ## Options
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `WithTitle(title)` | `"Swagger UI"` | HTML page title |
-| `WithBasePath(path)` | `"/swagger-ui"` | Mount prefix |
-| `WithDocExpansion(mode)` | `"none"` | Controls how API sections are expanded on load (see below) |
-| `WithTryItOut()` | disabled | Enable try-it-out buttons |
+| Option                   | Default         | Description                                                |
+| ------------------------ | --------------- | ---------------------------------------------------------- |
+| `WithTitle(title)`       | `"Swagger UI"`  | HTML page title                                            |
+| `WithBasePath(path)`     | `"/swagger-ui"` | Mount prefix                                               |
+| `WithDocExpansion(mode)` | `"none"`        | Controls how API sections are expanded on load (see below) |
+| `WithTryItOut()`         | disabled        | Enable try-it-out buttons                                  |
 
 ### WithDocExpansion modes
 
-| Mode | Behaviour |
-|------|-----------|
-| `"none"` | All sections collapsed on load — fastest initial render, good for large specs |
+| Mode     | Behaviour                                                                                                                   |
+| -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `"none"` | All sections collapsed on load — fastest initial render, good for large specs                                               |
 | `"list"` | Each tag group (e.g. "Users", "Orders") is expanded to show the list of endpoints, but each endpoint body remains collapsed |
-| `"full"` | Every endpoint is fully expanded, showing request/response details immediately — convenient for small specs |
+| `"full"` | Every endpoint is fully expanded, showing request/response details immediately — convenient for small specs                 |
 
 ## Handler only (no mux registration)
 

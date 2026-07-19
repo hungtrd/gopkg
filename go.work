@@ -1,0 +1,12 @@
+go 1.25.12
+
+use (
+	./base62
+	./crypto
+	./error
+	./http
+	./interval
+	./log
+	./mask
+	./swaggerui
+)

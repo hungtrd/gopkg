@@ -5,7 +5,7 @@ A reusable Go package that serves Swagger UI with embedded static assets. Caller
 ## Usage
 
 ```go
-import "github.com/hungtrd/gopkg/swaggerui"
+import "go.hung.rocks/x/swaggerui"
 
 mux := http.NewServeMux()
 

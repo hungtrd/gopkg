@@ -12,7 +12,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/hungtrd/gopkg/swaggerui"
+	"go.hung.rocks/x/swaggerui"
 )
 
 func main() {

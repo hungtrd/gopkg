@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Cấu hình mapping từ domain sang GitHub repo -->
+        <meta name="go-import" content="go.hung.rocks git https://github.com/hungtrd/gopkg">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="go-import" content="go.hung.rocks/x git https://github.com/hexgate/x">
-  <meta name="go-source"
-    content="go.hung.rocks/x https://github.com/hexgate/x https://github.com/hexgate/x/tree/master{/dir} https://github.com/hexgate/x/blob/master{/dir}/{file}#L{line}">
-  <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/go.hung.rocks/x">
-</head>
+        <!-- (Tùy chọn) Hướng dẫn pkg.go.dev cách lấy link source code để hiển thị document -->
+        <meta name="go-source" content="go.hung.rocks https://github.com/hungtrd/gopkg https://github.com/hungtrd/gopkg/tree/main{/dir} https://github.
+  com/hungtrd/gopkg/blob/main{/dir}/{file}#L{line}">
 
-<body>
-  Redirecting…
-</body>
-
-</html>
+        <!-- Tự động chuyển hướng nếu người dùng dùng trình duyệt truy cập thẳng vào domain -->
+        <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/go.hung.rocks">
+    </head>
+    <body>
+        <p>Redirecting to Go documentation...</p>
+    </body>
+    </html>
